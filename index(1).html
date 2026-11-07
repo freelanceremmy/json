@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>JSON <span>Formatter</span></h1>
+
+<div class="controls">
+  <button class="primary" onclick="formatJSON()">Format / Beautify</button>
+  <button onclick="minifyJSON()">Minify</button>
+  <button onclick="validateJSON()">Validate</button>
+  <button onclick="copyOutput()">Copy Output</button>
+  <button onclick="clearAll()">Clear</button>
+  <button onclick="loadSample()">Load Sample</button>
+  <select id="indent">
+    <option value="2">Indent: 2 spaces</option>
+    <option value="4">Indent: 4 spaces</option>
+    <option value="tab">Indent: Tab</option>
+  </select>
+</div>
+
+<div class="grid">
+  <div>
+    <label>INPUT - Paste your JSON here</label>
+    <textarea id="input" placeholder='Paste JSON like {"name":"Emmanuel","age":15}'></textarea>
+  </div>
+  <div>
+    <label>OUTPUT - Formatted result</label>
+    <textarea id="output" readonly placeholder="Formatted JSON will appear here..."></textarea>
+  </div>
+</div>
+
+<div id="status"></div>
+<div class="stats" id="stats"></div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
